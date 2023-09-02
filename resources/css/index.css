@@ -1,0 +1,261 @@
+/*
+yellow:#ffc627
+black:#000
+white:#fff
+blue:#769ce9
+*/
+* {
+    font-family:"Crimson Text", "Times New Roman", serif;
+    font-size:20px;
+    font-weight:400;
+    line-height:2;
+    margin:0;
+    padding:0;
+}
+
+footer, header, main {
+    position:relative;
+    top:100px;
+}
+
+footer {
+    background-color:#000;
+    border-top:2px solid #ffc627;
+    color:#fff;
+    padding:20px;
+}
+
+footer a {color:#769ce9;}
+
+footer a:hover {color:#ffc627;}
+
+footer a:active {opacity:0.5;}
+
+footer h1 {
+    border-bottom:2px solid #fff;
+    color:#ffc627;
+    display:inline-block;
+    font-size:1.6rem;
+}
+
+footer h2 {
+    display:inline;
+    font-size:1.1rem;
+}
+
+header {
+    background-color:#769ce9;
+    padding:65px 0px;
+    text-align:center;
+}
+
+header a {
+    color:#000;
+    letter-spacing:2px;
+    margin:0px 10px;
+    text-transform:uppercase;
+}
+
+header h1 {
+    border-bottom:5px solid #ffc627;
+    border-top:5px solid #ffc627;
+    font-size:5rem;
+    font-weight:800;
+    display:inline-block;
+    letter-spacing:5px;
+    margin:50px 0px;
+    padding:10px 25px;
+    text-transform:uppercase;
+}
+
+header ul li+li::before {
+    content:"|";
+}
+
+header a:hover {opacity:0.75;}
+
+header a:active {opacity:0.5;}
+
+header li {
+    display:inline;
+}
+
+h1, h2, h3, h4 {font-family:"Comfortaa", "arial", sans-serif;}
+
+h2 {font-size:2.4rem;}
+
+nav {
+    align-content:center;
+    align-items:center;
+    background-color:#000;
+    box-shadow:0px 5px 10px #ffc627;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    max-height:126px;
+    padding:10px 0px;
+    position:fixed;
+    width:100%;
+    z-index:10;
+}
+
+nav a {
+    color:#ffc627;
+    text-decoration:none;
+    margin:0px 10px;
+}
+
+nav a:hover {color:#fff;}
+
+nav a:active {opacity:0.75;}
+
+section {padding:25px 0px;}
+
+section h1 {
+    font-size:3.8rem;
+    color:#769ce9;
+    text-align:center;
+}
+
+.minis {
+    background-color:#fff;
+    box-shadow:0px 0px 10px #000;
+    flex-basis:500px;
+    margin:20px 0;
+    padding:50px 10px;
+    text-align:center;
+}
+
+.minis ul {
+    margin:0 auto;
+    max-width:450px;
+}
+
+.photos {
+    align-content:space-around;
+    align-items:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding:30px;
+}
+
+.photos h2, .photos p {
+    width:95%;
+}
+
+.photos h2 {text-align:center;}
+
+.photos img {
+    flex:1 3 600px;
+    height:auto;
+    margin:20px 0;
+    max-width:600px;
+}
+
+.photos#black {
+    background-color:#000;
+    color:#fff;
+}
+
+.photos#black a {color:#769ce9;}
+
+.photos#black h2 {color:#ffc627;}
+
+#exp {background-color:#000;}
+
+#exp h1 {
+    background-color:#000;
+    color:#ffc627;
+}
+
+#gen {
+    display:grid;
+    gap:0 5px;
+    grid-template:1fr 2fr 2fr / 2fr 1fr;
+    justify-content:center;
+    margin:0 auto;
+    padding:25px 0px;
+    min-height:600px;
+    max-width:1300px;
+}
+
+#gen h1 {grid-column:1 / 3;}
+
+#gen img {grid-area:2 / 2 / 4 / 3;}
+
+#imga {
+    flex-grow:0;
+    flex-shrink:5;
+}
+
+#imga:hover {opacity:0.75;}
+
+#imga:active {opacity:0.25;}
+
+#skinterest {
+    align-content:space-around;
+    background-color:#769ce9;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    min-height:600px;
+    padding:50px 0px;
+}
+
+@media only screen and (max-width:1200px) {
+    html {font-size:28px;}
+
+    #gen {
+        display:flex;
+        flex-wrap:wrap;
+        margin:0;
+    }
+
+    #gen p {
+        max-width:1000px;
+    }
+
+    #gen img {
+        flex-basis:300px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    footer, header, main {top:350px;}
+
+    html {font-size:12px;}
+
+    nav {
+        flex-direction:column;
+        max-height:400px;
+    }
+
+    .minis {
+        flex-basis:400px;
+    }
+
+    .minis ul {
+        max-width:300px;
+    }
+
+    section, article, header, footer {padding:20px 0 !important;}
+
+    .photos img {
+        flex-basis:300px;
+        max-width:300px;
+    }
+
+    #gen {width:none;}
+
+    #gen img {
+        flex-basis:150px;
+        max-width:150px;
+    }
+
+    #gen p {
+        margin:0 auto;
+        max-width: 400px;
+        text-align:center;
+    }
+}
