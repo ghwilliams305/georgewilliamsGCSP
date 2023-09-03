@@ -5,6 +5,7 @@ white:#fff
 blue:#769ce9
 */
 * {
+    box-sizing:border-box;
     font-family:"Crimson Text", "Times New Roman", serif;
     font-size:20px;
     font-weight:400;
@@ -13,16 +14,18 @@ blue:#769ce9
     padding:0;
 }
 
+a, li, p {font-size:1rem;}
+
 footer, header, main {
     position:relative;
-    top:100px;
+    top:5rem;
 }
 
 footer {
     background-color:#000;
     border-top:2px solid #ffc627;
     color:#fff;
-    padding:20px;
+    padding:1rem;
 }
 
 footer a {color:#769ce9;}
@@ -45,14 +48,14 @@ footer h2 {
 
 header {
     background-color:#769ce9;
-    padding:65px 0px;
+    padding:3.25rem 0;
     text-align:center;
 }
 
 header a {
     color:#000;
-    letter-spacing:2px;
-    margin:0px 10px;
+    letter-spacing:0.1rem;
+    margin:0 0.5rem;
     text-transform:uppercase;
 }
 
@@ -62,9 +65,9 @@ header h1 {
     font-size:5rem;
     font-weight:800;
     display:inline-block;
-    letter-spacing:5px;
-    margin:50px 0px;
-    padding:10px 25px;
+    letter-spacing:0.25rem;
+    margin:2.5rem 0px;
+    padding:0.5rem 1.25rem;
     text-transform:uppercase;
 }
 
@@ -85,15 +88,15 @@ h1, h2, h3, h4 {font-family:"Comfortaa", "arial", sans-serif;}
 h2 {font-size:2.4rem;}
 
 nav {
-    align-content:center;
+    align-content:space-around;
     align-items:center;
     background-color:#000;
-    box-shadow:0px 5px 10px #ffc627;
+    box-shadow:0px 0.25rem 0.5rem #ffc627;
     display:flex;
     flex-wrap:wrap;
     justify-content:space-around;
-    max-height:126px;
-    padding:10px 0px;
+    height:5rem;
+    padding:0.5rem 0;
     position:fixed;
     width:100%;
     z-index:10;
@@ -102,14 +105,14 @@ nav {
 nav a {
     color:#ffc627;
     text-decoration:none;
-    margin:0px 10px;
+    margin:0 0.5rem;
 }
 
 nav a:hover {color:#fff;}
 
 nav a:active {opacity:0.75;}
 
-section {padding:25px 0px;}
+section {padding:1.25rem 0;}
 
 section h1 {
     font-size:3.8rem;
@@ -119,16 +122,17 @@ section h1 {
 
 .minis {
     background-color:#fff;
-    box-shadow:0px 0px 10px #000;
-    flex-basis:500px;
-    margin:20px 0;
-    padding:50px 10px;
+    box-shadow:0 0 0.5rem #000;
+    margin:1rem;
+    min-width:20rem;
+    padding:2.5rem 0.5rem;
     text-align:center;
+    width:45%;
 }
 
 .minis ul {
     margin:0 auto;
-    max-width:450px;
+    width:85%;
 }
 
 .photos {
@@ -137,7 +141,7 @@ section h1 {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-around;
-    padding:30px;
+    padding:1.5rem;
 }
 
 .photos h2, .photos p {
@@ -147,10 +151,10 @@ section h1 {
 .photos h2 {text-align:center;}
 
 .photos img {
-    flex:1 3 600px;
     height:auto;
-    margin:20px 0;
-    max-width:600px;
+    margin:1rem 0;
+    min-width:20rem;
+    width:48%;
 }
 
 .photos#black {
@@ -171,22 +175,29 @@ section h1 {
 
 #gen {
     display:grid;
-    gap:0 5px;
-    grid-template:1fr 2fr 2fr / 2fr 1fr;
+    gap:0 1rem;
+    grid-template:1fr 2fr 1fr 1fr / 2fr 1fr;
     justify-content:center;
     margin:0 auto;
-    padding:25px 0px;
-    min-height:600px;
-    max-width:1300px;
+    padding:1.25rem 0;
+    width:85%;
 }
 
 #gen h1 {grid-column:1 / 3;}
 
-#gen img {grid-area:2 / 2 / 4 / 3;}
+#gen img {
+    grid-area:2 / 2 / span 3 / 3;
+    width:100%;
+}
 
 #imga {
     flex-grow:0;
     flex-shrink:5;
+}
+
+#imga img {
+    height:3.4rem;
+    width:auto;
 }
 
 #imga:hover {opacity:0.75;}
@@ -199,63 +210,68 @@ section h1 {
     display:flex;
     flex-wrap:wrap;
     justify-content:space-around;
-    min-height:600px;
-    padding:50px 0px;
+    min-height:30rem;
+    padding:2.5rem 0;
 }
 
-@media only screen and (max-width:1200px) {
-    html {font-size:28px;}
+@media only screen and (min)
 
+@media only screen and (min-width:2400px) and (max-width:3132px) {
+    html {font-size:40px;}
+}
+
+@media only screen and (min-width:1700px) and (max-width:2400px) {
+    html {font-size:30px;}
+}
+
+@media only screen and (min-width:1400px) and (max-width:1700px) {
+    html {font-size:25px;}
+}
+
+@media only screen and (max-width:1117px) {
+    footer, header, main {top:10rem;}
+
+    nav {height:10rem;}
+}
+
+@media only screen and (max-width:1030px) {
     #gen {
+        align-items:center;
         display:flex;
-        flex-wrap:wrap;
-        margin:0;
+        flex-direction:column;
     }
+
+    #gen img {width:50%;}
 
     #gen p {
-        max-width:1000px;
-    }
-
-    #gen img {
-        flex-basis:300px;
+        line-height:2;
+        margin:0.4rem 0;
+        text-align:center;
+        width:70%;
     }
 }
 
-@media only screen and (max-width:500px) {
-    footer, header, main {top:350px;}
+@media only screen and (max-width:610px) {
+    #gen img {width:70%;}
 
-    html {font-size:12px;}
+    #gen p {width:90%;}
+}
 
-    nav {
-        flex-direction:column;
-        max-height:400px;
-    }
+@media only screen and (max-width:494px) {
+    html {font-size:15px;}
+}
 
-    .minis {
-        flex-basis:400px;
-    }
+@media only screen and (max-width:374px) {
+    html {font-size:10px;}
 
-    .minis ul {
-        max-width:300px;
-    }
+    .minis {width:90%;}
+    
+    .minis ul {width:70%;}
+}
 
-    section, article, header, footer {padding:20px 0 !important;}
+@media only screen and (max-width:282px) {
+}
 
-    .photos img {
-        flex-basis:300px;
-        max-width:300px;
-    }
-
-    #gen {width:none;}
-
-    #gen img {
-        flex-basis:150px;
-        max-width:150px;
-    }
-
-    #gen p {
-        margin:0 auto;
-        max-width: 400px;
-        text-align:center;
-    }
+@media only screen and (max-width:243px) {
+    html {font-size:8px;}
 }
