@@ -2,7 +2,9 @@
     font-size: 20px;
 }
 
-header {padding:4.5rem;}
+header {padding:4.5rem 0;}
+
+p {min-width:600px;}
 
 .project img {
     flex: 2 2 30%;
@@ -74,4 +76,42 @@ header {padding:4.5rem;}
     background-color: #769ce9;
     color: #000;
     padding:3rem !important;
+}
+
+@media only screen and (max-width:1180px) {
+    header h1 {font-size:3rem;}
+}
+
+@media only screen and (max-width:964px) {
+    .project h2 {
+        text-align:center;
+    }
+
+    .project img {width: 80%;}
+
+    .project p {
+        margin:2rem 0;
+        text-align:center;
+    }
+
+    .project section {justify-content: center;}
+}
+
+@media only screen and (max-width:758px) {
+    header h1 {font-size:2rem;}
+}
+
+@media only screen and (max-width:655px) {
+    p {min-width:0px;}
+
+    .project section {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:565px) {
+    header h1 {font-size:1rem;}
+
+    #course h1 {font-size: 3rem;}
 }
