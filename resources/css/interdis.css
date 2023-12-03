@@ -113,11 +113,12 @@ p {min-width:600px;}
 #solution aside img {
     flex-grow:0;
     height:30rem;
-    opacity:0.9;
     width:auto;
 }
 
-#solution aside img:hover {opacity:1;}
+#solution aside img:hover {opacity:0.9;}
+
+#solution aside img:active {opacity:0.75;}
 
 @media only screen and (max-width:1180px) {
     header h1 {font-size:3rem;}
