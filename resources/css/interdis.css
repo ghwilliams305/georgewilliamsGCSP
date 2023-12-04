@@ -93,7 +93,7 @@ p {min-width:600px;}
     box-sizing: border-box;
     border-radius:0.4rem;
     color:#769ce9;
-    flex-basis:5%;
+    flex-basis:1.5;
     font-size:2rem;
     font-weight:800;
     height:5rem;
@@ -112,6 +112,7 @@ p {min-width:600px;}
 
 #solution aside img {
     flex-grow:0;
+    flex-shrink:2;
     height:30rem;
     width:auto;
 }
@@ -156,4 +157,15 @@ p {min-width:600px;}
     header h1 {font-size:1rem;}
 
     #course h1 {font-size: 3rem;}
+}
+
+@media only screen and (max-width:464px) {
+    #solution aside button {
+        display:none;
+    }
+
+    #solution aside img {
+        width:75%;
+        height:auto;
+    }
 }
