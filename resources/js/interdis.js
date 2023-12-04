@@ -11,10 +11,12 @@ const imgList = [
     'IMG_20231130_120812820.jpg',
     'IMG_20231201_145006711.jpg',
     'IMG_20231201_145010164.jpg',
+    'GCSP 2.jpg',
+    'GCSP group.jpg',
 ];
 
 //Sets the current image
-let curImage = 0;
+let curImage = Math.floor(Math.random() * imgList.length);
 
 //Changes the image on the HTML
 function setImage() {images.src = `./resources/images/${imgList[curImage]}`;}
@@ -22,14 +24,14 @@ function setImage() {images.src = `./resources/images/${imgList[curImage]}`;}
 //Slide forward through images
 function nextImage() {
     curImage++;
-    if(curImage > 5) curImage = 0;
+    if(curImage > 7) curImage = 0;
     setImage();
 }
 
 //Slide backward through images
 function backImage() {
     curImage--;
-    if(curImage < 0) curImage = 5;
+    if(curImage < 0) curImage = 7;
     setImage();
 }
 
