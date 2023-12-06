@@ -215,7 +215,7 @@ section h1 {
     padding:2.5rem 0;
 }
 
-@media only screen and (min-width:2400px) and (max-width:3132px) {
+@media only screen and (min-width:2400px) {
     html {font-size:40px;}
 }
 

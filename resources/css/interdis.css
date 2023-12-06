@@ -71,6 +71,7 @@ p {min-width:600px;}
     justify-content:space-between;
     margin-bottom:2rem;
     padding:0 3rem;
+    width:100%;
 }
 
 #karyc button {
@@ -79,7 +80,7 @@ p {min-width:600px;}
     box-sizing: border-box;
     border-radius:0.4rem;
     color:#769ce9;
-    flex-basis:2rem;
+    flex:2 2 2rem;
     font-size:2rem;
     font-weight:800;
     height:5rem;
@@ -98,9 +99,10 @@ p {min-width:600px;}
 
 #karyc #container {
     flex-grow:0;
-    flex-shrink:2;
+    flex-shrink:1;
     height:20rem;
-    width:30rem;
+    overflow:hidden;
+    width:50rem;
 }
 
 #karyc #container:hover {opacity:0.9;}
@@ -125,6 +127,7 @@ p {min-width:600px;}
 #navc {
     align-items:center;
     display:inline-flex;
+    flex-wrap:wrap;
     justify-content:space-around;
     margin:0 auto;
     width:20rem;
@@ -148,7 +151,11 @@ p {min-width:600px;}
 
 #solution aside {
     background-color: #769ce9;
-    padding:3rem;
+    padding:3rem 0;
+}
+
+@media only screen and (min-width:2000px) {
+    #karyc #container {height: 40rem;}
 }
 
 @media only screen and (max-width:1180px) {
@@ -172,6 +179,8 @@ p {min-width:600px;}
 
 @media only screen and (max-width:758px) {
     header h1 {font-size:2rem;}
+
+    #karyc #container {height:10rem;}
 }
 
 @media only screen and (max-width:655px) {
@@ -190,12 +199,7 @@ p {min-width:600px;}
 }
 
 @media only screen and (max-width:464px) {
-    #solution aside button {
-        display:none;
-    }
+    #karyc button {display:none;}
 
-    #solution aside img {
-        width:75%;
-        height:auto;
-    }
+    #karyc #container {height:15rem;}
 }

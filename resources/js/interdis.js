@@ -16,7 +16,7 @@ const imgList = [
     './resources/images/GCSP group.jpg',
 ];
 
-let curImage = 7
+let curImage = 7;
 
 //Changes the image on the HTML
 function setImage() {
