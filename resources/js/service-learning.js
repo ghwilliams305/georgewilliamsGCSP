@@ -7,7 +7,7 @@ const nav = document.getElementsByClassName('nav');
 //Creates a list of all the images
 const imgList = './resources/images/solar_slideshow/Slide';
 
-let curImage = 7;
+let curImage = 1;
 
 //Changes the image on the HTML
 function setImage() {
@@ -17,9 +17,9 @@ function setImage() {
         x.style.width = '0.5rem';
         x.style.height = '0.5rem';
     }
-    nav[curImage].style.opacity = '1';
-    nav[curImage].style.width = '1rem';
-    nav[curImage].style.height = '1rem';
+    nav[curImage - 1].style.opacity = '1';
+    nav[curImage - 1].style.width = '1rem';
+    nav[curImage - 1].style.height = '1rem';
 }
 
 //Slide forward through images
@@ -47,7 +47,7 @@ frontBtn.addEventListener('click', nextImage);
 images.addEventListener('click', nextImage);
 for(let i = 0; i < nav.length; i++) {
     nav[i].addEventListener('click', function() {
-        curImage = i;
+        curImage = i + 1;
         setImage();
     });
 }
