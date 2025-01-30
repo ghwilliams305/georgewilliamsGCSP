@@ -12,6 +12,7 @@ blue:#769ce9
     line-height:2;
     margin:0;
     padding:0;
+    transition: all ease-in 0.25s;
 }
 
 a, li, p {font-size:1rem;}
@@ -145,6 +146,19 @@ section h1 {
     padding:1.5rem;
 }
 
+.photos a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.photos a:hover {
+    opacity: 0.75;
+}
+
+.photos a:active {
+    opacity: 0.5;
+}
+
 .photos h2, .photos p {
     width:95%;
 }
@@ -166,6 +180,15 @@ section h1 {
 .photos#black a {color:#769ce9;}
 
 .photos#black h2 {color:#ffc627;}
+
+.photos#white {
+    background-color:#fff;
+    color:#000;
+}
+
+.photos#white a {color:#769ce9;}
+
+.photos#white h2 {color:#769ce9;}
 
 #exp {background-color:#000;}
 
