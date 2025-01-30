@@ -33,7 +33,7 @@ function setImage() {
 
 //Slide forward through images
 function nextImage() {
-    curImage = (curImage > 6) ? 0 : curImage + 1;
+    curImage = (curImage > 8) ? 0 : curImage + 1;
     setImage();
 }
 
