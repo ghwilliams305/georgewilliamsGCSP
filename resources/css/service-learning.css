@@ -26,7 +26,7 @@ section div {
     flex-basis: 60%;
 }
 
-section div#ISS {
+section div.long-img {
     flex: 2 2 30%;
     height: 25rem;
     margin: 0 1rem;
@@ -35,7 +35,7 @@ section div#ISS {
     overflow: hidden;
 }
 
-section div#ISS img {
+section div.long-img img {
     height: 100%;
     max-width: none;
     width: auto;
@@ -73,6 +73,13 @@ section#artifacts aside {
 
 section#artifacts h2 {
     color: #ffc627;
+}
+
+section#artifacts video {
+    height: auto;
+    margin: 1rem auto;
+    min-width: 40rem;
+    width: 65%;
 }
 
 section#connect {
