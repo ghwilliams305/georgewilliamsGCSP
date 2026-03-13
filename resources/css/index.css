@@ -170,7 +170,7 @@ section h1 {
 .photos iframe {
     height: 30rem;
     margin: 1rem 0;
-    min-width: 40rem;
+    min-width: 20rem;
     width: 90%;
 }
 
@@ -184,7 +184,7 @@ section h1 {
 .photos video {
     height: auto;
     margin: 1rem 0;
-    min-width: 40rem;
+    min-width: 20rem;
     width: 65%;
 }
 
